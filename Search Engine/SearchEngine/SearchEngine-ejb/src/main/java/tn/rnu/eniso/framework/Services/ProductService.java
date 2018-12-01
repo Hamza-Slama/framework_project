@@ -13,7 +13,6 @@ import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.persistence.SynchronizationType;
 import jdk.nashorn.internal.runtime.Context;
-import org.eclipse.persistence.internal.jpa.EntityManagerImpl;
 import tn.rnu.eniso.framework.models.Product;
 
 
@@ -24,7 +23,7 @@ import tn.rnu.eniso.framework.models.Product;
 @Stateless
 public class ProductService {
 
-    @PersistenceContext()
+    @PersistenceContext
     EntityManager dal   ;
 
    

@@ -65,7 +65,6 @@ public class DataGenerator {
         return   ser.findAll() ;
     }
     public static void main(String[] args) {
-      
         for (Product a : generateDataSet())
         {
             System.out.println(a.toString());
