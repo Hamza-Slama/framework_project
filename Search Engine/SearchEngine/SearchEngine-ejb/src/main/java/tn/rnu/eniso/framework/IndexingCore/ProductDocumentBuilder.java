@@ -8,6 +8,7 @@ package tn.rnu.eniso.framework.IndexingCore;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.LongPoint;
+import org.apache.lucene.document.NumericDocValuesField;
 import org.apache.lucene.document.StoredField;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
@@ -28,20 +29,21 @@ public class ProductDocumentBuilder implements DocumentBuilderInterface<Product>
 
     @Override
     public Document buildDocument() {
+    
         doc = new Document();
         if (instance == null)
             throw new RuntimeException("Attempt to Build Document on Null Object") ;
         else {
-            doc.add( new LongPoint("id",instance.getId()));
-               doc.add( new LongPoint("price",instance.getPrice()));
+            doc.add( new StoredField("id",instance.getId()));
+               doc.add( new  NumericDocValuesField("price",instance.getPrice()));
                doc.add(new StringField("name", instance.getName(), Field.Store.NO));
-                doc.add(new StringField("category", instance.getCategory(), Field.Store.YES));
+                doc.add(new StringField("category", instance.getCategory(), Field.Store.NO));
                doc.add( new TextField("description", instance.getDescription(), Field.Store.NO)) ;
-               doc.add( new  StoredField("number", instance.getPrice())) ;
+        
+             
         }
-        Document doctemp = doc ;
-        doc  = new Document() ;
-        return doctemp ;
+      ;
+        return doc ;
     }
     
 }
