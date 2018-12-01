@@ -1,0 +1,602 @@
+[
+	{
+		"name": "",
+		"category": "PC",
+		"Description": "in faucibus orci luctus et ultrices posuere cubilia Curae; Donec",
+		"price": 1838
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "porta elit, a feugiat tellus lorem eu metus. In lorem.",
+		"price": 2228
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "Duis elementum, dui quis accumsan convallis, ante lectus convallis est,",
+		"price": 2378
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "lacus. Quisque purus sapien, gravida non, sollicitudin a, malesuada id,",
+		"price": 1534
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "et, lacinia vitae, sodales at, velit. Pellentesque ultricies dignissim lacus.",
+		"price": 1108
+	},
+	{
+		"name": "HP",
+		"category": "",
+		"Description": "Quisque fringilla euismod enim. Etiam gravida molestie arcu. Sed eu",
+		"price": 1068
+	},
+	{
+		"name": "HP",
+		"category": "",
+		"Description": "sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus",
+		"price": 1176
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar",
+		"price": 2247
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "lacus. Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non leo.",
+		"price": 997
+	},
+	{
+		"name": "Lenovo",
+		"category": "",
+		"Description": "fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem",
+		"price": 1464
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "Nullam lobortis quam a felis ullamcorper viverra. Maecenas iaculis aliquet",
+		"price": 2367
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "libero. Donec consectetuer mauris id sapien. Cras dolor dolor, tempus",
+		"price": 1962
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "quis arcu vel quam dignissim pharetra. Nam ac nulla. In",
+		"price": 1996
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "sodales elit erat vitae risus. Duis a mi fringilla mi",
+		"price": 695
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus",
+		"price": 1375
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "primis in faucibus orci luctus et ultrices posuere cubilia Curae;",
+		"price": 2440
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac",
+		"price": 1919
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "amet luctus vulputate, nisi sem semper erat, in consectetuer ipsum",
+		"price": 2294
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "Donec non justo. Proin non massa non ante bibendum ullamcorper.",
+		"price": 606
+	},
+	{
+		"name": "HP",
+		"category": "",
+		"Description": "egestas blandit. Nam nulla magna, malesuada vel, convallis in, cursus",
+		"price": 662
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "arcu eu odio tristique pharetra. Quisque ac libero nec ligula",
+		"price": 1142
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus.",
+		"price": 781
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae velit",
+		"price": 742
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "ac turpis egestas. Fusce aliquet magna a neque. Nullam ut",
+		"price": 747
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor",
+		"price": 1008
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "arcu. Vivamus sit amet risus. Donec egestas. Aliquam nec enim.",
+		"price": 943
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "iaculis, lacus pede sagittis augue, eu tempor erat neque non",
+		"price": 2053
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum",
+		"price": 654
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus",
+		"price": 1309
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus",
+		"price": 1608
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor.",
+		"price": 1564
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec",
+		"price": 1506
+	},
+	{
+		"name": "HP",
+		"category": "",
+		"Description": "arcu. Sed et libero. Proin mi. Aliquam gravida mauris ut",
+		"price": 774
+	},
+	{
+		"name": "Lenovo",
+		"category": "",
+		"Description": "elit. Nulla facilisi. Sed neque. Sed eget lacus. Mauris non",
+		"price": 1650
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "faucibus orci luctus et ultrices posuere cubilia Curae; Donec tincidunt.",
+		"price": 1222
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "vitae diam. Proin dolor. Nulla semper tellus id nunc interdum",
+		"price": 2432
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "nibh sit amet orci. Ut sagittis lobortis mauris. Suspendisse aliquet",
+		"price": 1574
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "hendrerit neque. In ornare sagittis felis. Donec tempor, est ac",
+		"price": 2243
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "vulputate, risus a ultricies adipiscing, enim mi tempor lorem, eget",
+		"price": 1132
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "sed libero. Proin sed turpis nec mauris blandit mattis. Cras",
+		"price": 2460
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "dolor sit amet, consectetuer adipiscing elit. Etiam laoreet, libero et",
+		"price": 1148
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "magna. Ut tincidunt orci quis lectus. Nullam suscipit, est ac",
+		"price": 1918
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "Duis risus odio, auctor vitae, aliquet nec, imperdiet nec, leo.",
+		"price": 783
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "malesuada fames ac turpis egestas. Fusce aliquet magna a neque.",
+		"price": 2341
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales",
+		"price": 1460
+	},
+	{
+		"name": "Lenovo",
+		"category": "",
+		"Description": "Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin",
+		"price": 785
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "gravida nunc sed pede. Cum sociis natoque penatibus et magnis",
+		"price": 1713
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus",
+		"price": 2343
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "justo eu arcu. Morbi sit amet massa. Quisque porttitor eros",
+		"price": 661
+	},
+	{
+		"name": "Lenovo",
+		"category": "",
+		"Description": "velit. Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices.",
+		"price": 809
+	},
+	{
+		"name": "Lenovo",
+		"category": "",
+		"Description": "nunc sed libero. Proin sed turpis nec mauris blandit mattis.",
+		"price": 1845
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie",
+		"price": 2178
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "fermentum metus. Aenean sed pede nec ante blandit viverra. Donec",
+		"price": 2155
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus.",
+		"price": 1319
+	},
+	{
+		"name": "Lenovo",
+		"category": "",
+		"Description": "consequat auctor, nunc nulla vulputate dui, nec tempus mauris erat",
+		"price": 679
+	},
+	{
+		"name": "",
+		"category": "PC",
+		"Description": "nibh dolor, nonummy ac, feugiat non, lobortis quis, pede. Suspendisse",
+		"price": 2051
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci",
+		"price": 788
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam",
+		"price": 2479
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "metus sit amet ante. Vivamus non lorem vitae odio sagittis",
+		"price": 1326
+	},
+	{
+		"name": "HP",
+		"category": "",
+		"Description": "nibh. Quisque nonummy ipsum non arcu. Vivamus sit amet risus.",
+		"price": 1326
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi",
+		"price": 1732
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "neque. Morbi quis urna. Nunc quis arcu vel quam dignissim",
+		"price": 1445
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "Morbi non sapien molestie orci tincidunt adipiscing. Mauris molestie pharetra",
+		"price": 906
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante,",
+		"price": 2134
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "Praesent eu dui. Cum sociis natoque penatibus et magnis dis",
+		"price": 861
+	},
+	{
+		"name": "",
+		"category": "PC",
+		"Description": "ante dictum mi, ac mattis velit justo nec ante. Maecenas",
+		"price": 2449
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "Fusce feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+		"price": 833
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris",
+		"price": 654
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum.",
+		"price": 1180
+	},
+	{
+		"name": "Lenovo",
+		"category": "",
+		"Description": "massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus varius",
+		"price": 2292
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "et magnis dis parturient montes, nascetur ridiculus mus. Proin vel",
+		"price": 898
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "arcu. Curabitur ut odio vel est tempor bibendum. Donec felis",
+		"price": 1273
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat",
+		"price": 887
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "arcu. Nunc mauris. Morbi non sapien molestie orci tincidunt adipiscing.",
+		"price": 1800
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "eu tellus eu augue porttitor interdum. Sed auctor odio a",
+		"price": 2180
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "eu, placerat eget, venenatis a, magna. Lorem ipsum dolor sit",
+		"price": 1563
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "vitae, orci. Phasellus dapibus quam quis diam. Pellentesque habitant morbi",
+		"price": 2131
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "vel arcu eu odio tristique pharetra. Quisque ac libero nec",
+		"price": 1820
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "justo sit amet nulla. Donec non justo. Proin non massa",
+		"price": 889
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "felis eget varius ultrices, mauris ipsum porta elit, a feugiat",
+		"price": 2069
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames",
+		"price": 1615
+	},
+	{
+		"name": "HP",
+		"category": "PC",
+		"Description": "ultrices iaculis odio. Nam interdum enim non nisi. Aenean eget",
+		"price": 1600
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "metus. In lorem. Donec elementum, lorem ut aliquam iaculis, lacus",
+		"price": 1447
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris",
+		"price": 2232
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "pharetra. Quisque ac libero nec ligula consectetuer rhoncus. Nullam velit",
+		"price": 1624
+	},
+	{
+		"name": "",
+		"category": "",
+		"Description": "bibendum fermentum metus. Aenean sed pede nec ante blandit viverra.",
+		"price": 1437
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "et ultrices posuere cubilia Curae; Phasellus ornare. Fusce mollis. Duis",
+		"price": 1268
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat",
+		"price": 1932
+	},
+	{
+		"name": "DELL",
+		"category": "",
+		"Description": "enim nec tempus scelerisque, lorem ipsum sodales purus, in molestie",
+		"price": 1797
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam",
+		"price": 2304
+	},
+	{
+		"name": "ASUS",
+		"category": "PC",
+		"Description": "libero. Proin sed turpis nec mauris blandit mattis. Cras eget",
+		"price": 1595
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "ultrices sit amet, risus. Donec nibh enim, gravida sit amet,",
+		"price": 657
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "sed, facilisis vitae, orci. Phasellus dapibus quam quis diam. Pellentesque",
+		"price": 1321
+	},
+	{
+		"name": "Lenovo",
+		"category": "PC",
+		"Description": "libero. Proin sed turpis nec mauris blandit mattis. Cras eget",
+		"price": 2201
+	},
+	{
+		"name": "",
+		"category": "PC",
+		"Description": "facilisis non, bibendum sed, est. Nunc laoreet lectus quis massa.",
+		"price": 1144
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "eu, odio. Phasellus at augue id ante dictum cursus. Nunc",
+		"price": 2373
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "bibendum sed, est. Nunc laoreet lectus quis massa. Mauris vestibulum,",
+		"price": 1660
+	},
+	{
+		"name": "ASUS",
+		"category": "",
+		"Description": "ante dictum mi, ac mattis velit justo nec ante. Maecenas",
+		"price": 1668
+	},
+	{
+		"name": "",
+		"category": "PC",
+		"Description": "purus mauris a nunc. In at pede. Cras vulputate velit",
+		"price": 2048
+	},
+	{
+		"name": "DELL",
+		"category": "PC",
+		"Description": "molestie pharetra nibh. Aliquam ornare, libero at auctor ullamcorper, nisl",
+		"price": 1999
+	}
+]
