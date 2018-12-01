@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tn.rnu.eniso.framework.models;
+package tn.rnu.eniso.framework;
 
 import java.io.IOException;
 import java.util.List;
