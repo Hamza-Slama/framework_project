@@ -37,7 +37,8 @@ public class ProductService {
            
            dal.merge(a);
         } else {
-         
+             if (a.getId()==-1)
+                 a.setId(null);
             dal.persist(a);
         }
     }

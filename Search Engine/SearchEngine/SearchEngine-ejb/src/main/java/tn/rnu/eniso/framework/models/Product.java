@@ -10,6 +10,7 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 /**
@@ -25,6 +26,7 @@ public class Product implements Serializable {
     private Long id;
     private String name ;
     private String category ;
+    @Lob
     private String Description ;
     private Long price;
     
@@ -39,6 +41,14 @@ public class Product implements Serializable {
 
 
     public Product() {
+    }
+
+    public Product(Long id, String name, String category, String Description, Long price) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.Description = Description;
+        this.price = price;
     }
    
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="center">
+        <h1>
+            List Of Products
+        </h1>
+        <h:form>
+            <p:dataTable var="x" value="#{productsList.model}">
+                   <p:column headerText="id:  ">
+                       <h:outputText value="#{x.id}" />
+    </p:column>
+    <p:column headerText="Name: ">
+        <h:outputText value="#{x.name}" />
+    </p:column>
+ 
+    <p:column headerText="Category: ">
+        <h:outputText value="#{x.category}" />
+    </p:column>
+ 
+    <p:column headerText="Description: ">
+        <h:outputText value="#{x.description}" />
+    </p:column>
+        <p:column headerText="Price: ">
+            <h:outputText value="#{x.price}" />
+    </p:column>
+                <p:column headerText="Actions: ">
+                  
+                    <p:commandButton value="Edit" action="#{productOperations.goToProductPage(x)}" style="margin-right:20px;" styleClass="ui-priority-primary" />
+                    <p:commandButton value="Delete" action="#{productOperations.deleteRow(x)}" style="margin-right:20px;" styleClass="ui-priority-primary" />
+    </p:column>
+ 
+
+</p:dataTable>
+            <p:commandButton value="Create New Product" action="#{productOperations.goToProductPage()}" style="margin-right:20px;" styleClass="ui-priority-primary" />
+
+            </h:form>
+                </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
