@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Myteck Product</title>
+        
+         <style type="text/css">
+            .ui-datalist {
+                width:300px;
+                margin-bottom: 20px;
+            }
+
+            .ui-datalist-item {
+                padding:3px;
+            }
+
+            .paginated .ui-datalist-data {
+                padding-left: 20px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+   #{MyTeckController.init()}
+        
+       <!-- <h:button value="Click Me" onclick="#{MyTeckController.saveData()}" />-->
+        
+        <br>
+            
+        </br>
+        
+        <h:form>
+         
+            
+                
+            <p:dataTable value="#{MyTeckController.model.dataHolders}" var="item">
+                        <p:column headerText="productName">
+                            <p:outputLabel value="#{item.productName}"/>
+                        </p:column>
+                        <p:column headerText="price">
+                            <p:outputLabel value="#{item.price}"/>
+                        </p:column>
+                        <p:column headerText="desciption">
+                            <p:outputLabel value="#{item.desciption}"/>
+                        </p:column>
+                        <p:column headerText="link">
+                            <p:outputLabel value="#{item.linkToDetails}"/>
+                        </p:column>
+            </p:dataTable>
+         
+        </h:form>
+
+    </h:body>
+</html>
