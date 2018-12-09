@@ -36,9 +36,9 @@ public class ProductDocumentBuilder implements DocumentBuilderInterface<Product>
         else {
             doc.add( new StoredField("id",instance.getId()));
                doc.add( new  NumericDocValuesField("price",instance.getPrice()));
-               doc.add(new StringField("name", instance.getName(), Field.Store.NO));
+               doc.add(new TextField("name", instance.getName().toLowerCase(), Field.Store.NO));
                 doc.add(new StringField("category", instance.getCategory(), Field.Store.NO));
-               doc.add( new TextField("description", instance.getDescription(), Field.Store.NO)) ;
+               doc.add( new TextField("description", instance.getDescription().toLowerCase(), Field.Store.NO)) ;
         
              
         }

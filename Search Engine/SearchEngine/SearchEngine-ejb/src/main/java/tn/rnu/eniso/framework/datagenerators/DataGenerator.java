@@ -73,11 +73,15 @@ public class DataGenerator {
     }
     public static void main(String[] args) throws IOException, ParseException {
         ProductDocumentBuilder builder = new ProductDocumentBuilder() ;
-          DocumentIndexer<Product> indexer = new DocumentIndexer<>();
+          DocumentIndexer indexer = null ;
+       
+            indexer = new DocumentIndexer("product");
+      
         
         for (Product a : generateDataSet())
         { 
-            a.setId(0l);
+            System.out.println(a.toString());
+            a.setId(a.getPrice());
             builder.setEntitySource(a);
             indexer.getIndexWriter().addDocument(builder.buildDocument()) ;
         }

@@ -13,7 +13,7 @@ and open the template in the editor.
 }
 .central {
    position:fixed;
-    top: 50%;
+    top: 30%;
     left: 50%;
     width:30em;
     height:18em;
@@ -27,4 +27,8 @@ and open the template in the editor.
    text-align: center ;
  
      
+}
+.list-item {
+    background-color: white;
+    padding: 2em ;
 }

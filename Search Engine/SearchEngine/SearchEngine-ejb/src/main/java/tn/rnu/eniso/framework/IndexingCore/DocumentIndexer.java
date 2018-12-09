@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jdk.nashorn.internal.runtime.Context;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
@@ -23,20 +25,20 @@ import org.apache.lucene.store.FSDirectory;
  *
  * @author Bacem
  */
-public class DocumentIndexer <T> {
-    private final T ob = (T) new Object();
+public class DocumentIndexer {
+    
   private   Path path ;
    private  IndexWriter indexWriter ;
  private    IndexSearcher indexSearcher ;
 
  
-    public DocumentIndexer() throws IOException {
-         this.path = Paths.get( "C:\\Users\\Bacem\\Desktop\\fwk\\"+ob.getClass().getSimpleName() );
-         FSDirectory directory = FSDirectory.open(path);
+    public DocumentIndexer( String path) throws IOException {
+         this.path = Paths.get( "C:\\Users\\Bacem\\Desktop\\fwk\\"+path );
+         FSDirectory directory = FSDirectory.open(this.path);
          Analyzer analyzer = new WhitespaceAnalyzer();
 IndexWriterConfig config = new
 IndexWriterConfig( analyzer);
-//config.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
+config.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
 this.indexWriter = new IndexWriter(directory, config);
 this.indexWriter.commit();
 DirectoryReader directoryReader = DirectoryReader.open(directory);
@@ -68,6 +70,16 @@ DirectoryReader directoryReader = DirectoryReader.open(directory);
 
     public void setIndexSearcher(IndexSearcher indexSearcher) {
         this.indexSearcher = indexSearcher;
+    }
+
+    public void close() {
+      try {
+          indexWriter.close();
+          indexSearcher.getIndexReader().close();
+          indexWriter.getDirectory().close();
+      } catch (IOException ex) {
+          Logger.getLogger(DocumentIndexer.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }
 
     

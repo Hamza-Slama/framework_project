@@ -13,36 +13,49 @@ and open the template in the editor.
     <h:head>
         <title>Lawejli</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link type="text/css" rel="stylesheet" 
-            href="resources/css/searchengincecss.css" />
+        <link type="text/css" rel="stylesheet" 
+              href="resources/css/searchengincecss.css" />
     </h:head>
 
     <h:body>
         <f:facet name="last">
-		<h:outputStylesheet library="default" name="css/searchengincecss.css"  />
-	</f:facet>
+            <h:outputStylesheet library="default" name="css/searchengincecss.css"  />
+        </f:facet>
         <p:layout fullPage="true" styleClass="lbl">
             <p:layoutUnit styleClass="lbl" position="center" resizable="true" size="800" minSize="40" maxSize="200">
-            
+
                 <h:form>
+                    <p:link value="Click here to add product ?" href="create.xhtml"
+                            > </p:link> <br> </br>
                             
-                        <p:row >
-                            <div>
+                             <p:link value="Click here to list all  products ?" href="create.xhtml"
+                            > </p:link> <br> </br>
+                            
+                    <p:link value="Click here to index database ?" onclick="#{searchEngineController.indexInnerData()}"
+                        > </p:link>
+                    <p:row >
+                        <div>
+
+                        </div>
+                        <div  class="central">
+                            <div class="logo" >
+                                <h1>
+                                    LAWEJLI
+                                </h1>
+
+                                <h6 >
+                                    Artificial Stupidity 
+                                </h6>
                                
                             </div>
-                            <div  class="central">
-                                <div class="logo" >
-                                    <h1>
-                                        LAWEJLI
-                                    </h1>
-                                  
-                                    <h6 >
-                                            Artificial Stupidity 
-                                        </h6>
+                             <div style="position: relative;margin: 2em;left:20% ;top:10%;"> 
+                                 <p:autoComplete  id="acSimple" value="#{searchEngineController.searchQuery}" completeMethod="#{searchEngineController.completeTermContains}" />
+                                <br> </br>
+                                <p:commandButton  action="#{searchEngineController.startSearch}" style="display: block ;width: 50%" value="Search"></p:commandButton>
                                 </div>
-                            </div>
-                          
-                        </p:row>
+                        </div>
+
+                    </p:row>
 
                 </h:form>
             </p:layoutUnit>

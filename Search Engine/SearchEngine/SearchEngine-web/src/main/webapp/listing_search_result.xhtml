@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Lawejli</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link type="text/css" rel="stylesheet" 
+              href="resources/css/searchengincecss.css" />
+    </h:head>
+
+    <h:body>
+
+
+        <p:layout fullPage="true" styleClass="lbl">
+            <p:layoutUnit styleClass="lbl" position="center" resizable="true" size="800" minSize="40" maxSize="200">
+
+                <h:form id="searchpage">
+
+                    <p:row >
+
+
+                        <div >
+
+                            <div style="display:  block; margin: 2em;"> 
+                                <p:autoComplete  id="acSimple"  value="#{searchEngineController.searchQuery}" completeMethod="#{searchEngineController.completeTermContains}" />
+
+                                <p:commandButton  action="#{searchEngineController.startSearch}"  value="Search" update=":searchpage"></p:commandButton>
+                            </div>
+                            
+                            <ui:repeat value="#{searchEngineController.searchedProducts}" var="prod" varStatus="loop">
+                               
+                                <div class="list-item">
+                                    <h1>
+                                        #{prod.name}
+                                    </h1>
+                                    <h2>
+                                        #{prod.price}
+                                    </h2>
+                                    <p>
+                                        #{prod.description}
+                                    </p>
+                                </div>
+                            </ui:repeat>
+
+                        </div>
+
+                    </p:row>
+
+                </h:form>
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
