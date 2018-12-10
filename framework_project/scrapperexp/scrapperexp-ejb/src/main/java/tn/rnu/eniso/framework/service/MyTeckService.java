@@ -36,16 +36,8 @@ public class MyTeckService {
     EntityManager dal;
 
       public void SaveHolder(MyteckProduct a) {
-        //select
         dal.persist(a);
-        /*MyteckProduct old = dal.find(MyteckProduct.class, a.getId());
-        if (old != null) {
-            //update
-            dal.merge(a);
-        } else {
-            //insert
-            dal.persist(a);
-        }*/
+      
     }
       
       public void remove(int MyteckProductId) {

@@ -26,14 +26,15 @@ public class ScrapperController {
     DataHolderService service;
     private Model model = new Model();
 
-    @Init
+
     public void init() {
+        System.out.println("Ok bb");
  
     }
     
     public void saveData(){
       
-        System.out.println("Ok");
+        System.out.println("Ok from save data ");
         //System.out.println("a536");
        // service.SaveHolder(new DataHolder());
     }
