@@ -18,6 +18,13 @@ import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
+import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopDocs;
+import tn.rnu.eniso.framework.IndexingCore.DocumentIndexer;
+import tn.rnu.eniso.framework.IndexingCore.ProductDocumentBuilder;
 import tn.rnu.eniso.framework.Services.ProductService;
 import tn.rnu.eniso.framework.models.Product;
 
@@ -64,11 +71,33 @@ public class DataGenerator {
         
         return   ser.findAll() ;
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ParseException {
+        ProductDocumentBuilder builder = new ProductDocumentBuilder() ;
+          DocumentIndexer indexer = null ;
+       
+            indexer = new DocumentIndexer("product");
+      
+        
         for (Product a : generateDataSet())
-        {
+        { 
             System.out.println(a.toString());
+            a.setId(a.getPrice());
+            builder.setEntitySource(a);
+            indexer.getIndexWriter().addDocument(builder.buildDocument()) ;
         }
+        System.out.println( indexer.getIndexWriter().commit());
+        WhitespaceAnalyzer anal = new WhitespaceAnalyzer();
+        QueryParser parser = new QueryParser("name", anal);
+        TopDocs result =      indexer.getIndexSearcher().search(parser.parse("HP"), 100) ;
+        System.out.println(result.totalHits);
+           for (ScoreDoc a : result.scoreDocs)
+        { 
+            System.out.println(indexer.getIndexSearcher().doc(a.doc).toString());
+        }
+       
+           indexer.getIndexWriter().close();
+           indexer.getIndexSearcher().getIndexReader().close();
     }
+    
 
 }

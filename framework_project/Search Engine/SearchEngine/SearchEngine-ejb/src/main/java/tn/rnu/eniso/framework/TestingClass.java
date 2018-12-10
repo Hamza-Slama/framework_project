@@ -32,6 +32,7 @@ import org.apache.lucene.index.MultiFields;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
@@ -41,7 +42,9 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
+import tn.rnu.eniso.framework.IndexingCore.DocumentIndexer;
 import tn.rnu.eniso.framework.IndexingCore.ProductDocumentBuilder;
+import tn.rnu.eniso.framework.Services.SearchQueryService;
 import tn.rnu.eniso.framework.models.Product;
 
 /**
@@ -50,53 +53,17 @@ import tn.rnu.eniso.framework.models.Product;
  */
 public class TestingClass {
 
-    public static void main(String[] args) throws IOException {
-      //indexing
-      FSDirectory directory = FSDirectory.open(Paths.get("C:\\Users\\Bacem\\Documents\\NetBeansProjects\\LuceneTutorial\\indexes"));
-   Analyzer analyzer = new WhitespaceAnalyzer();
-IndexWriterConfig config = new IndexWriterConfig( analyzer);
-config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
-config.setRAMBufferSizeMB(64);
-config.setMaxBufferedDocs(4000);
-IndexWriter indexWriter = new IndexWriter(directory, config);
-        Document document = new Document();
-document.add(new StringField("telephone_number", "04735264927",
-Field.Store.YES));
-document.add(new StringField("area_code", "0484",
-Field.Store.NO));
-Document document2 = new Document();
-String text = "Lucene is an Information Retrieval library"
-+"written in Java.";
-document2.add(new TextField("text", text, Field.Store.YES));
-        ProductDocumentBuilder a = new ProductDocumentBuilder();
-Product p = new Product() ;
-p.setName("pc hp");
-p.setCategory("PC") ;
-p.setDescription("pc hp 2go ram nvicia");
-p.setId(2L);
-p.setPrice(1230);
-a.setEntitySource(p);
-indexWriter.addDocument(document);
-indexWriter.addDocument(document2);
-indexWriter.addDocument(a.buildDocument()); 
-indexWriter.commit();
-
-//reading 
-IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get("C:\\Users\\Bacem\\Documents\\NetBeansProjects\\LuceneTutorial\\indexes")));
-document = reader.document(0);
-System.out.println("doc 0: " + document.getField("telephone_number"));
-document = reader.document(1);
-System.out.println("doc 1: " + document.toString());
-document = reader.document(2);
-System.out.println("doc 2: " + document.toString());
-
-
-IndexSearcher indexSearcher =  new IndexSearcher(reader);
-IndexReader re = indexSearcher.getIndexReader();
+    public static void main(String[] args) throws IOException, ParseException {
    
-        
-        
-      
+       DocumentIndexer indexer = new DocumentIndexer("product");
+        WhitespaceAnalyzer anal = new WhitespaceAnalyzer();
+     
 
+        MultiFieldQueryParser parser = new MultiFieldQueryParser(
+                new String[]{"name", "description"},
+                anal);
+
+        TopDocs result = indexer.getIndexSearcher().search(parser.parse(" LED 4 GO Ram hp   "), 10);
+        System.out.println("res "+  result.totalHits);
     }
 }
