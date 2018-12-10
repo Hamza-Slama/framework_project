@@ -20,6 +20,7 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.FSDirectory;
+import tn.rnu.eniso.framework.MyConstantes;
 
 /**
  *
@@ -33,7 +34,7 @@ public class DocumentIndexer {
 
  
     public DocumentIndexer( String path) throws IOException {
-         this.path = Paths.get( "C:\\Users\\Bacem\\Desktop\\fwk\\"+path );
+         this.path = Paths.get( MyConstantes.inderxerPathCste +path );
          FSDirectory directory = FSDirectory.open(this.path);
          Analyzer analyzer = new WhitespaceAnalyzer();
 IndexWriterConfig config = new

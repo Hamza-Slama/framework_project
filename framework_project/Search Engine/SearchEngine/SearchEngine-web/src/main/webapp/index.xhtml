@@ -24,15 +24,16 @@ and open the template in the editor.
         <p:layout fullPage="true" styleClass="lbl">
             <p:layoutUnit styleClass="lbl" position="center" resizable="true" size="800" minSize="40" maxSize="200">
 
-                <h:form>
+                <h:form id="form1">
                     <p:link value="Click here to add product ?" href="create.xhtml"
                             > </p:link> <br> </br>
                             
                              <p:link value="Click here to list all  products ?" href="create.xhtml"
                             > </p:link> <br> </br>
                             
-                    <p:link value="Click here to index database ?" onclick="#{searchEngineController.indexInnerData()}"
-                        > </p:link>
+                            <p:commandLink  ajax="false" action="#{searchEngineController.indexInnerData()}"
+                                           > 
+                               <h:outputText value="Click here to index database ? " /></p:commandLink>
                     <p:row >
                         <div>
 
