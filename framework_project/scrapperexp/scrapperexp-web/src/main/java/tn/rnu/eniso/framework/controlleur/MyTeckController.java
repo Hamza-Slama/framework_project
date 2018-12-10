@@ -21,17 +21,20 @@ import tn.rnu.eniso.framework.service.MyTeckService;
 @ManagedBean
 @SessionScoped
 public class MyTeckController {
+    
     @EJB
     MyTeckService service;
     private Model model = new Model();
-   @Init
+   
     public void init() {
-        service.saveAll();
+        System.out.println("hello hamza and ismail and bacem w bilel m3ana w ken t7ib hamza mara o5ra");
+       // service.saveAll();
+       
     }
     
     public void saveData(){
       
-        System.out.println("Ok");
+        System.out.println("Ok From my teck save Data ");
         //System.out.println("a536");
         //service.SaveHolder(new MyteckProduct());
     }
@@ -61,5 +64,9 @@ public class MyTeckController {
             this.dataHolders = dataHolders;
         }
 
+    
+
+        
     }
+    
 }

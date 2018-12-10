@@ -10,6 +10,7 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 /**
  *
@@ -24,6 +25,7 @@ public class MyteckProduct implements Serializable {
     private int id ;
     private String productName ;
     private String price ;
+    @Lob
     private String desciption ;
     private String linkToDetails ;
     private String imgPath;
