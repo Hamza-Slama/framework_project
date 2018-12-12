@@ -18,79 +18,93 @@ import javax.persistence.Table;
  * @author Bacem
  */
 @Entity(name = "Product")
-@Table(name = "PRODUCT")
+@Table(name = "MYTECKPRODUCT")
 public class Product implements Serializable {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private String name ;
-    private String category ;
+    private int id ;
+    private String productName ;
+    private String price ;
     @Lob
-    private String Description ;
-    private Long price;
-    
-
-    public long getPrice() {
-        return price;
-    }
-
-    public void setPrice(long price) {
-        this.price = price;
-    }
-
+    private String desciption ;
+    private String linkToDetails ;
+    private String imgPath;
 
     public Product() {
     }
 
-    public Product(Long id, String name, String category, String Description, Long price) {
+    public Product(int id, String productName, String price, String desciption, String linkToDetails, String imgPath) {
         this.id = id;
-        this.name = name;
-        this.category = category;
-        this.Description = Description;
+        this.productName = productName;
         this.price = price;
+        this.desciption = desciption;
+        this.linkToDetails = linkToDetails;
+        this.imgPath = imgPath;
     }
-   
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public String getCategory() {
-        return category;
+    public String getPrice() {
+        return price;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getDesciption() {
+        return desciption;
     }
 
-    public void setDescription(String Description) {
-        this.Description = Description;
+    public void setDesciption(String desciption) {
+        this.desciption = desciption;
+    }
+
+    public String getLinkToDetails() {
+        return linkToDetails;
+    }
+
+    public void setLinkToDetails(String linkToDetails) {
+        this.linkToDetails = linkToDetails;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "id=" + id + ", productName=" + productName + ", price=" + price + ", desciption=" + desciption + ", linkToDetails=" + linkToDetails + ", imgPath=" + imgPath + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 79 * hash + Objects.hashCode(this.id);
-        hash = 79 * hash + Objects.hashCode(this.name);
-        hash = 79 * hash + Objects.hashCode(this.category);
-        hash = 79 * hash + Objects.hashCode(this.Description);
+        int hash = 5;
+        hash = 13 * hash + this.id;
+        hash = 13 * hash + Objects.hashCode(this.productName);
+        hash = 13 * hash + Objects.hashCode(this.price);
+        hash = 13 * hash + Objects.hashCode(this.desciption);
+        hash = 13 * hash + Objects.hashCode(this.linkToDetails);
+        hash = 13 * hash + Objects.hashCode(this.imgPath);
         return hash;
     }
 
@@ -106,25 +120,28 @@ public class Product implements Serializable {
             return false;
         }
         final Product other = (Product) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        if (this.id != other.id) {
             return false;
         }
-        if (!Objects.equals(this.category, other.category)) {
+        if (!Objects.equals(this.productName, other.productName)) {
             return false;
         }
-        if (!Objects.equals(this.Description, other.Description)) {
+        if (!Objects.equals(this.price, other.price)) {
             return false;
         }
-        if (!Objects.equals(this.id, other.id)) {
+        if (!Objects.equals(this.desciption, other.desciption)) {
+            return false;
+        }
+        if (!Objects.equals(this.linkToDetails, other.linkToDetails)) {
+            return false;
+        }
+        if (!Objects.equals(this.imgPath, other.imgPath)) {
             return false;
         }
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" + "id=" + id + ", name=" + name + ", category=" + category + ", Description=" + Description + ", price=" + price + '}';
-    }
-    
-    
+
+
+
 }

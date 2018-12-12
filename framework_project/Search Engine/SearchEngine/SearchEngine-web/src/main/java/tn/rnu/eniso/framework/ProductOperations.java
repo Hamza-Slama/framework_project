@@ -21,7 +21,7 @@ import tn.rnu.eniso.framework.models.Product;
 @ManagedBean
 public class ProductOperations {
     @EJB ProductService metier;
-    private Product model= new Product(-1L,"","","",0L);
+    private Product model= new Product(-1, "", "", "", "", "");
     
     
     
@@ -33,7 +33,7 @@ public class ProductOperations {
            System.out.println("Editing " + model.toString());
         metier.saveProduct(model);
         
-        model= new Product(-1l,"","","",0l);
+        model=new Product(-1, "", "", "", "", "");
         return "list" ;
     }
     public String deleteRow(Product a)
@@ -48,7 +48,7 @@ public class ProductOperations {
     }
      public String goToProductPage(){
           System.out.println("Creating " );
-        model = new Product(-1l,"","","",0l);
+        model = new Product(-1, "", "", "", "", "");
         return "create";
     }
 }

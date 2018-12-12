@@ -24,18 +24,13 @@ and open the template in the editor.
                     <p:panelGrid columns="2">
 
                         <h:outputLabel value="Name"/>
-                        <p:inputText value="#{productOperations.model.name}"/>
+                        <p:inputText value="#{productOperations.model.productName}"/>
                         <h:outputLabel value="Price"/>
                         <p:inputText  value="#{productOperations.model.price}"/>  
                         <h:outputLabel value="Category"/>
-                        <p:selectOneMenu value="#{productOperations.model.category}">
-                            <f:selectItem itemValue = "Computer" itemLabel = "Computer" /> 
-                            <f:selectItem itemValue = "Smart Phone" itemLabel = "Smart Phone" /> 
-                            <f:selectItem itemValue = "Accessory" itemLabel = "Accessory" />
-
-                        </p:selectOneMenu>
+                      
                         <h:outputLabel value="Description"/>
-                        <p:inputTextarea rows="10" cols="50" value="#{productOperations.model.description}"  queryDelay="750" minQueryLength="4" />
+                        <p:inputTextarea rows="10" cols="50" value="#{productOperations.model.desciption}"  queryDelay="750" minQueryLength="4" />
                     </p:panelGrid>
                     <p:commandButton value="save" action="#{productOperations.save()}"/>
                 </h:form>

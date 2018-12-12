@@ -44,7 +44,6 @@ public class ProductService {
            dal.merge(a);
         } else {
              if (a.getId()==-1)
-                 a.setId(null);
             dal.persist(a);
         }
     }
@@ -57,18 +56,18 @@ public class ProductService {
     }
     
     public List<Product> findProuductsByName(String theName){
-        return dal.createQuery("Select x from Product x where x.name = :p1")
+        return dal.createQuery("Select x from Product x where x.productName = :p1")
                 .setParameter("p1", theName)
                 .getResultList();
     }
-      public List<Product> findProuductsByIdList(List<Long> id){
+      public List<Product> findProuductsByIdList(List<Integer> id){
        ArrayList<Product> res = new ArrayList<>() ;
-       for (Long el: id) {
+       for (Integer el: id) {
            res.add(findProuductById(el));
        }
        return res ;
     }
-      public Product findProuductById(Long id){
+      public Product findProuductById(int id){
 
 
         return  (Product) dal.createQuery("Select x from Product x where x.id =  :p ")

@@ -35,10 +35,10 @@ public class ProductDocumentBuilder implements DocumentBuilderInterface<Product>
             throw new RuntimeException("Attempt to Build Document on Null Object") ;
         else {
             doc.add( new StoredField("id",instance.getId()));
-               doc.add( new  NumericDocValuesField("price",instance.getPrice()));
-               doc.add(new TextField("name", instance.getName().toLowerCase(), Field.Store.NO));
-                doc.add(new StringField("category", instance.getCategory(), Field.Store.NO));
-               doc.add( new TextField("description", instance.getDescription().toLowerCase(), Field.Store.NO)) ;
+               doc.add( new  StringField("price",instance.getPrice(),Field.Store.NO));
+               doc.add(new TextField("name", instance.getProductName().toLowerCase(), Field.Store.NO));
+               
+               doc.add( new TextField("description", instance.getDesciption().toLowerCase(), Field.Store.NO)) ;
         
              
         }

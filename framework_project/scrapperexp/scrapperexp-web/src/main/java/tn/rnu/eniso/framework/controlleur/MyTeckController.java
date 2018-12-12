@@ -28,7 +28,7 @@ public class MyTeckController {
    
     public void init() {
         System.out.println("hello hamza and ismail and bacem w bilel m3ana w ken t7ib hamza mara o5ra");
-       // service.saveAll();
+       service.saveAll();
        
     }
     

@@ -67,7 +67,7 @@ public class SearchQueryService {
     }
 
     public List<Product> searchForProduct(String word) throws IOException, ParseException {
-        ArrayList<Long> re = new ArrayList<>();
+        ArrayList<Integer> re = new ArrayList<>();
         DocumentIndexer indexer = new DocumentIndexer("product");
         WhitespaceAnalyzer anal = new WhitespaceAnalyzer();
 
@@ -80,7 +80,7 @@ public class SearchQueryService {
         for (ScoreDoc scoredoc : result.scoreDocs) {
         
             re.add(indexer.getIndexSearcher().doc(scoredoc.doc).getField("id")
-                    .numericValue().longValue()
+                    .numericValue().intValue()
             );
         }
 
