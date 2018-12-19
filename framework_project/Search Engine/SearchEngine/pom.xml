@@ -10,5 +10,6 @@
     <module>SearchEngine-ear</module>
     <module>SearchEngine-web</module>
     <module>SearchEngine-ejb</module>
+    <module>SearchEngineWeb</module>
   </modules>
 </project>

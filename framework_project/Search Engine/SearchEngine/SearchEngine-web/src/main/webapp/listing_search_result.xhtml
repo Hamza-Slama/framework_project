@@ -35,19 +35,27 @@ and open the template in the editor.
 
                                 <p:commandButton  action="#{searchEngineController.startSearch}"  value="Search" update=":searchpage"></p:commandButton>
                             </div>
-                            
+
                             <ui:repeat value="#{searchEngineController.searchedProducts}" var="prod" varStatus="loop">
-                               
-                                <div class="list-item">
-                                    <h1>
-                                        #{prod.productName}
-                                    </h1>
-                                    <h2>
-                                        #{prod.price}
-                                    </h2>
-                                    <p>
-                                        #{prod.desciption}
-                                    </p>
+                                <div>
+                                    <div class="list-item">
+                                        <h1>
+                                            #{prod.productName}
+                                        </h1>
+                                        <h2>
+                                            #{prod.price}
+                                        </h2>
+                                          <img src="#{prod.imgPath}" > </img>
+                                        <p>
+                                            #{prod.desciption}
+                                        </p>
+                                          <p:link  target="_blank" value="See More" href="#{prod.linkToDetails}" > </p:link>
+
+                                    </div>
+                                 
+
+                                      
+                                  
                                 </div>
                             </ui:repeat>
 

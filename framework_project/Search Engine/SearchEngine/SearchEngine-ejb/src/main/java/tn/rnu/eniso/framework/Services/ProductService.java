@@ -81,7 +81,9 @@ public class ProductService {
   
     public void indexInnerData() throws IOException
     {
+        
         DocumentIndexer indexer = new DocumentIndexer("product");
+        indexer.getIndexWriter().deleteAll();
         ProductDocumentBuilder builder = new ProductDocumentBuilder();
         Document doc ;
         for (Product p: findAll())
