@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tn.rnu.eniso.framework</groupId>
+  <artifactId>user-management</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>user-management</name>
+  <modules>
+    <module>user-management-ear</module>
+    <module>user-management-web</module>
+    <module>user-management-ejb</module>
+    <module>recommendationData</module>
+  </modules>
+</project>
