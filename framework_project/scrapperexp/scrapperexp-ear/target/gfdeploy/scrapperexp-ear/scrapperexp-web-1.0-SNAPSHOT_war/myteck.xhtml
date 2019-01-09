@@ -13,6 +13,7 @@
             <p:layoutUnit position="center">
         <h1>
             List Of Products
+            #{myTeckController.init()}
         </h1>
         <h:form>
             <p:dataTable var="x" value="#{myTeckController.model.myteckProducts}">

@@ -1,5 +1,6 @@
 tn/rnu/eniso/framework/controlleur/ProductOperations.class
 tn/rnu/eniso/framework/controlleur/MyTeckController.class
+tn/rnu/eniso/frameworkconst/Const.class
 tn/rnu/eniso/framework/controlleur/MyTeckController$Model.class
 tn/rnu/eniso/framework/controlleur/ScrapperController$Model.class
 tn/rnu/eniso/framework/controlleur/ScrapperController.class
