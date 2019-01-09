@@ -1,5 +1,7 @@
-/home/ismail/projectModule/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/model/AppUser.java
-/home/ismail/projectModule/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/model/GenderEnum.java
-/home/ismail/projectModule/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/NewSessionBean.java
-/home/ismail/projectModule/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/model/UserType.java
-/home/ismail/projectModule/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/service/SubscriptionService.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/NewSessionBean.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/model/ApplicationUsr.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/model/Search.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/model/GenderEnum.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/service/SubscriptionService.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/model/Preference.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-ejb/src/main/java/tn/rnu/eniso/framework/model/UserType.java

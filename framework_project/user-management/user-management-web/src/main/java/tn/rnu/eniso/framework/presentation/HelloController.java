@@ -5,11 +5,12 @@
  */
 package tn.rnu.eniso.framework.presentation;
 
+import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
-import tn.rnu.eniso.framework.model.AppUser;
+import tn.rnu.eniso.framework.model.ApplicationUsr;
 
 /**
  *
@@ -17,12 +18,22 @@ import tn.rnu.eniso.framework.model.AppUser;
  */
 @ManagedBean
 @SessionScoped
-public class HelloController {
+public class HelloController implements Serializable{
     
     private Model model = new Model();
     
     @ManagedProperty("#{loginController}")
-    LoginController controller;
+    private LoginController loginController;
+
+    public LoginController getLoginController() {
+        return loginController;
+    }
+
+    public void setLoginController(LoginController loginController) {
+        this.loginController = loginController;
+    }
+    
+    
     
     public Model getModel() {
         return model;
@@ -34,18 +45,18 @@ public class HelloController {
     
     @PostConstruct
     public void init() {
-        getModel().setCurrentUser(controller.getModel().getCurrentUser());
+        getModel().setCurrentUser(loginController.getModel().getCurrentUser());
     }
     
     public static class Model {
         
-        private AppUser currentUser;
+        private ApplicationUsr currentUser;
         
-        public AppUser getCurrentUser() {
+        public ApplicationUsr getCurrentUser() {
             return currentUser;
         }
         
-        public void setCurrentUser(AppUser currentUser) {
+        public void setCurrentUser(ApplicationUsr currentUser) {
             this.currentUser = currentUser;
         }
         

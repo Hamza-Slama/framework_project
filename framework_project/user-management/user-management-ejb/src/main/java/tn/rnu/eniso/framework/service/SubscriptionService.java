@@ -13,7 +13,9 @@ import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import tn.rnu.eniso.framework.model.AppUser;
+import tn.rnu.eniso.framework.model.ApplicationUsr;
+import tn.rnu.eniso.framework.model.Preference;
+import tn.rnu.eniso.framework.model.Search;
 
 /**
  *
@@ -23,20 +25,22 @@ import tn.rnu.eniso.framework.model.AppUser;
 @TransactionManagement(TransactionManagementType.CONTAINER)
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
 public class SubscriptionService {
-    
+
     @PersistenceContext
     private EntityManager em;
-    
-   /* @PostConstruct
+
+    /*@PostConstruct
     public void defaultConfiguration() {
         UserType userType = new UserType();
         userType.setCode("Admin");
         userType.setName("Admin");
+        UserType userType1=new UserType();
+        userType1.setCode("Client");
+        userType1.setName("Client");
         em.persist(userType);
     }*/
-    
     public boolean userExist(String login) {
-        List<AppUser> user = em.createQuery("Select e from AppUser e where e.login = :p")
+        List<ApplicationUsr> user = em.createQuery("Select e from ApplicationUsr e where e.login = :p")
                 .setParameter("p", login).getResultList();
         if (user.size() > 0) {
             return true;
@@ -44,19 +48,32 @@ public class SubscriptionService {
             return false;
         }
     }
-    
-    public void saveUser(AppUser user) {
+
+    public List<Preference> findPreferencesByUser(ApplicationUsr user) {
+        List<Preference> preferences = em.createQuery("Select e from Preference e where e.user = :p")
+                .setParameter("p", user).getResultList();
+        return preferences;
+
+    }
+
+    public List<Search> findSearchesByUser(ApplicationUsr user) {
+        List<Search> searches = em.createQuery("Select e from Search e where e.user = :p")
+                .setParameter("p", user).getResultList();
+        return searches;
+    }
+
+    public void saveUser(ApplicationUsr user) {
         em.persist(user);
     }
-    
-    public AppUser findUser(String login, String password) {
-        List<AppUser> user = em.createQuery("Select e from AppUser e where e.login = :p and e.password = :q ")
+
+    public ApplicationUsr findUser(String login, String password) {
+        List<ApplicationUsr> user = em.createQuery("Select e from ApplicationUsr e where e.login = :p and e.password = :q ")
                 .setParameter("p", login).setParameter("q", password).getResultList();
         if (user.size() > 0) {
             return user.get(0);
         } else {
             return null;
         }
-        
+
     }
 }
