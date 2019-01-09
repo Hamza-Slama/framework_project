@@ -6,122 +6,50 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Sign up</title>
-        <meta charset="UTF-8"/>
+        <title>Sign Up</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <!--===============================================================================================-->	
-        <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"/>
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css"/>
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css"/>
-        <!--===============================================================================================-->	
-        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css"/>
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css"/>
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css"/>
-        <!--===============================================================================================-->	
-        <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css"/>
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="css/util.css"/>
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <!--===============================================================================================-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- Custom Theme files -->
+        <link href="subscribe.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- //Custom Theme files -->
+        <!-- web font -->
+        <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet"/>
+        <!-- //web font -->
     </h:head>
     <h:body>
-        <div class="limiter">
-            <div class="container-login100">
-                <div class="wrap-login100">
-                    <h:form class="login100-form validate-form">
-                        <span class="login100-form-title p-b-26">
-                            Sign up
-                        </span>
-                        <span class="login100-form-title p-b-48">
-                            <i class="zmdi zmdi-font"></i>
-                        </span>
+        <!-- main -->
+        <div class="main-w3layouts wrapper">
+            <h1>Sign Up</h1>
+            <div class="main-agileinfo">
+                <div class="agileits-top">
+                    <h:form>
+                        <h:inputText class="text" value="#{subscribeController.model.firstName}" required="true"/>
+                        <h:inputText class="text" required="true" value="#{subscribeController.model.lastName}"/>
+                        <p:calendar value="#{subscribeController.model.birthDate}" required="true"/>
+                        <h:inputText label="Email" class="text email" required="true" value="#{subscribeController.model.email}"/>
+                        <h:inputSecret value="#{subscribeController.model.password}" class="text" required="true"/>
 
-                        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                            <h:inputText class="input100" value="#{subscribeController.model.firstName}"/>
-                            <span class="focus-input100" data-placeholder="First Name"></span>
-                        </div>
-
-                        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                            <h:inputText class="input100" value="#{subscribeController.model.lastName}"/>
-                            <span class="focus-input100" data-placeholder="Last Name"></span>
-                        </div>
-
-                        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                            <p:calendar class="input100" value="#{subscribeController.model.birthDate}"/>
-                            <span class="focus-input100" data-placeholder="Birth Date"></span>
-                        </div>
-
-                        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                            <p:selectOneMenu class="input100" value="#{subscribeController.model.gender}" style="width:125px">
-                                <f:selectItem itemLabel="MALE" itemValue="MALE" />
-                                <f:selectItem itemLabel="FEMALE" itemValue="FEMALE" />
-                            </p:selectOneMenu>
-                            <span class="focus-input100" data-placeholder="Gender"></span>
-                        </div>
-
-                        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                            <h:inputText class="input100" value="#{subscribeController.model.email}"/>
-                            <span class="focus-input100" data-placeholder="Email"></span>
-                        </div>
-
-                        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                            <h:inputText class="input100" value="#{subscribeController.model.login}"/>
-                            <span class="focus-input100" data-placeholder="login"></span>
-                        </div>
-
-                        <div class="wrap-input100 validate-input" data-validate="Enter password">
-                            <span class="btn-show-pass">
-                                <i class="zmdi zmdi-eye"></i>
-                            </span>
-                            <h:inputSecret class="input100" value="#{subscribeController.model.password}"/>
-                            <span class="focus-input100" data-placeholder="Password"></span>
-                        </div>
-
-                        <div class="container-login100-form-btn">
-                            <div class="wrap-login100-form-btn">
-                                <div class="login100-form-bgbtn"></div>
-                                <h:commandLink class="login100-form-btn" value="Sign up" action="#{subscribeController.subscribe()}"/>
-                            </div>
-                        </div>
-
-                        <div class="text-center p-t-115">
-                            <span class="txt1">
-                                Have you already an account?
-                            </span>
-
-                            <h:commandLink class="txt2" value="Sign In" action="login"/>
-                        </div>
+                        <h:commandButton action="#{subscribeController.subscribe()}"  value="SIGNUP" />
+                    </h:form>
+                    <h:form>
+                        <p>Don't have an Account? <h:commandLink action="login" value="Login Now!"/></p>
                     </h:form>
                 </div>
             </div>
+            <ul class="colorlib-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-
-
-        <div id="dropDownSelect1"></div>
-
-        <!--===============================================================================================-->
-        <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-        <!--===============================================================================================-->
-        <script src="vendor/animsition/js/animsition.min.js"></script>
-        <!--===============================================================================================-->
-        <script src="vendor/bootstrap/js/popper.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-        <!--===============================================================================================-->
-        <script src="vendor/select2/select2.min.js"></script>
-        <!--===============================================================================================-->
-        <script src="vendor/daterangepicker/moment.min.js"></script>
-        <script src="vendor/daterangepicker/daterangepicker.js"></script>
-        <!--===============================================================================================-->
-        <script src="vendor/countdowntime/countdowntime.js"></script>
-        <!--===============================================================================================-->
-        <script src="js/main.js"></script>
+        <!-- //main -->
     </h:body>
 </html>

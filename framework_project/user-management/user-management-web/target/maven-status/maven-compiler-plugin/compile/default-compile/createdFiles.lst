@@ -1,6 +1,14 @@
-tn/rnu/eniso/framework/presentation/SubscribeController.class
-tn/rnu/eniso/framework/presentation/LoginController$Model.class
-tn/rnu/eniso/framework/presentation/SubscribeController$Model.class
+tn/rnu/eniso/framework/presentation/WebSecurityConfig.class
 tn/rnu/eniso/framework/presentation/LoginController.class
+tn/rnu/eniso/framework/presentation/LoginController$Model.class
+tn/rnu/eniso/framework/presentation/DashboardController.class
+tn/rnu/eniso/framework/presentation/SearchController.class
+tn/rnu/eniso/framework/presentation/Application.class
+tn/rnu/eniso/framework/presentation/DashboardController$Model.class
+tn/rnu/eniso/framework/presentation/SubscribeController.class
+tn/rnu/eniso/framework/presentation/PreferenceController.class
+tn/rnu/eniso/framework/presentation/PreferenceController$Model.class
+tn/rnu/eniso/framework/presentation/SearchController$Model.class
+tn/rnu/eniso/framework/presentation/SubscribeController$Model.class
 tn/rnu/eniso/framework/presentation/HelloController$Model.class
 tn/rnu/eniso/framework/presentation/HelloController.class

@@ -5,11 +5,12 @@
  */
 package tn.rnu.eniso.framework.presentation;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import tn.rnu.eniso.framework.model.AppUser;
+import tn.rnu.eniso.framework.model.ApplicationUsr;
 import tn.rnu.eniso.framework.model.GenderEnum;
 import tn.rnu.eniso.framework.service.SubscriptionService;
 
@@ -19,7 +20,7 @@ import tn.rnu.eniso.framework.service.SubscriptionService;
  */
 @ManagedBean
 @SessionScoped
-public class SubscribeController {
+public class SubscribeController implements Serializable{
 
     private Model model = new Model();
     @EJB
@@ -34,15 +35,15 @@ public class SubscribeController {
     }
 
     public String subscribe() {
-        if (!service.userExist(getModel().getLogin())) {
+        if (service.userExist(getModel().getEmail())) {
             return "subscribe";
         } else {
-            AppUser user=new AppUser();
+            ApplicationUsr user=new ApplicationUsr();
             user.setBirthDate(getModel().getBirthDate());
             user.setEmailAddress(getModel().getEmail());
             user.setFirstName(getModel().getFirstName());
             user.setLastName(getModel().getLastName());
-            user.setLogin(getModel().getLogin());
+            user.setLogin(getModel().getEmail());
             user.setPassword(getModel().getPassword());
             user.setSubscriptionDate(new Date());
             service.saveUser(user);
@@ -54,11 +55,9 @@ public class SubscribeController {
 
         private String firstName;
         private String lastName;
-        private String login;
         private String password;
-        private Date birthDate;
         private String email;
-        private GenderEnum gender;
+        private Date birthDate;
 
         public String getFirstName() {
             return firstName;
@@ -74,14 +73,6 @@ public class SubscribeController {
 
         public void setLastName(String lastName) {
             this.lastName = lastName;
-        }
-
-        public String getLogin() {
-            return login;
-        }
-
-        public void setLogin(String login) {
-            this.login = login;
         }
 
         public String getPassword() {
@@ -106,14 +97,6 @@ public class SubscribeController {
 
         public void setEmail(String email) {
             this.email = email;
-        }
-
-        public GenderEnum getGender() {
-            return gender;
-        }
-
-        public void setGender(GenderEnum gender) {
-            this.gender = gender;
         }
 
     }

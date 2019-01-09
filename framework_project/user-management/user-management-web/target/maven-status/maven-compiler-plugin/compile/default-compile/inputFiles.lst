@@ -1,3 +1,8 @@
-/home/ismail/projectModule/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/HelloController.java
-/home/ismail/projectModule/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/LoginController.java
-/home/ismail/projectModule/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/SubscribeController.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/HelloController.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/Application.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/SubscribeController.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/LoginController.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/SearchController.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/PreferenceController.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/DashboardController.java
+/home/ismail/moduleProject/framework_project/framework_project/user-management/user-management-web/src/main/java/tn/rnu/eniso/framework/presentation/WebSecurityConfig.java

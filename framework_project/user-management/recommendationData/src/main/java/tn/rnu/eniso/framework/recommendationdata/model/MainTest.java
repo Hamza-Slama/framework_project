@@ -6,18 +6,10 @@
 package tn.rnu.eniso.framework.recommendationdata.model;
 
 import com.mongodb.MongoClient;
-import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import tn.rnu.eniso.framework.recommendationdata.service.SearchedDataService;
 import xyz.morphia.Datastore;
 import xyz.morphia.Morphia;
-import xyz.morphia.query.Query;
 
 /**
  *
@@ -60,7 +52,7 @@ public class MainTest {
         final Datastore datastore = morphia.createDatastore(new MongoClient(), "admin");
         datastore.getDB().dropDatabase();
         datastore.ensureIndexes();
-        SearchedData d1 = new SearchedData();
+        /*SearchedData d1 = new SearchedData();
         SearchedData d2 = new SearchedData();
         SearchedData d3 = new SearchedData();
         d1.setId(1);
@@ -77,6 +69,6 @@ public class MainTest {
         datastore.save(d3);
         final Query<SearchedData> query = datastore.createQuery(SearchedData.class);
         final List<SearchedData> employees = query.asList();
-        System.out.println(employees);
+        System.out.println(employees);*/
     }
 }

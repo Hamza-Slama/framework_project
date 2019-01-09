@@ -5,10 +5,11 @@
  */
 package tn.rnu.eniso.framework.presentation;
 
+import java.io.Serializable;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import tn.rnu.eniso.framework.model.AppUser;
+import tn.rnu.eniso.framework.model.ApplicationUsr;
 import tn.rnu.eniso.framework.service.SubscriptionService;
 
 /**
@@ -17,7 +18,7 @@ import tn.rnu.eniso.framework.service.SubscriptionService;
  */
 @ManagedBean
 @SessionScoped
-public class LoginController {
+public class LoginController implements Serializable{
 
     private Model model = new Model();
     @EJB
@@ -37,26 +38,28 @@ public class LoginController {
     }
 
     public String login() {
-        AppUser user = service.findUser(getModel().getLogin(), getModel().getPassword());
+        ApplicationUsr user = service.findUser(getModel().getLogin(), getModel().getPassword());
         if (user == null) {
             return "login";
         } else {
             getModel().setCurrentUser(user);
-            return "hello";
+            return "search";
         }
     }
+    
+    
 
     public static class Model {
 
         private String login;
         private String password;
-        private AppUser currentUser;
+        private ApplicationUsr currentUser;
 
-        public AppUser getCurrentUser() {
+        public ApplicationUsr getCurrentUser() {
             return currentUser;
         }
 
-        public void setCurrentUser(AppUser currentUser) {
+        public void setCurrentUser(ApplicationUsr currentUser) {
             this.currentUser = currentUser;
         }
 
