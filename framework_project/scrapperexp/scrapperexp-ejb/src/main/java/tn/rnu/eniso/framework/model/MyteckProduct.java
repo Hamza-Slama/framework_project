@@ -35,12 +35,22 @@ public class MyteckProduct implements Serializable {
     public MyteckProduct()  {
 
     }
+
+    public MyteckProduct(int id, String productName, String price, String desciption, String linkToDetails, String imgPath) {
+        this.id = id;
+        this.productName = productName;
+        this.price = price;
+        this.desciption = org.jsoup.parser.Parser.unescapeEntities(desciption, true);
+        this.linkToDetails = linkToDetails;
+        this.imgPath = imgPath;
+    }
+    
     
     public MyteckProduct( String productName, String price, String desciption, String linkToDetails , String imgPath) {
         //id = count.incrementAndGet();
         this.productName = productName;
         this.price = price;
-        this.desciption = desciption;
+        this.desciption = org.jsoup.parser.Parser.unescapeEntities(desciption, true);
         this.linkToDetails = linkToDetails;
         this.imgPath= imgPath;
     }
@@ -77,11 +87,15 @@ public class MyteckProduct implements Serializable {
     }
 
     public String getDesciption() {
-        return desciption;
+        String unescapedString = org.jsoup.parser.Parser.unescapeEntities(desciption, true);
+                        System.out.println(unescapedString);
+                        desciption = unescapedString ;
+       // String afterDecoding = StringEscapeUtils.unescapeHtml(beforeDecoding);
+        return unescapedString;
     }
 
     public void setDesciption(String desciption) {
-        this.desciption = desciption;
+        this.desciption = org.jsoup.parser.Parser.unescapeEntities(desciption, true);
     }
 
     public String getLinkToDetails() {

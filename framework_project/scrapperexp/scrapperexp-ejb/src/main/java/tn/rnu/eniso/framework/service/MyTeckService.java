@@ -58,7 +58,7 @@ public class MyTeckService {
     public void saveAll(){
         System.out.println("SaveAll Myteck ");
         
-    ArrayList<MyteckProduct> listLink = getLinkHashMap("https://www.mytek.tn/13-pc-portable?selected_filters=page-");    
+    ArrayList<MyteckProduct> listLink = getMyTeckProduct("https://www.mytek.tn/13-pc-portable?selected_filters=page-");    
         for (Iterator<MyteckProduct> it = listLink.iterator(); it.hasNext(); ) {
             MyteckProduct data = it.next();
             SaveHolder(data);
@@ -67,7 +67,36 @@ public class MyTeckService {
     }
     
     
-    public   ArrayList<MyteckProduct> getLinkHashMap (String BASE_URL){
+    public void removeProduct(MyteckProduct a) {
+        MyteckProduct old = dal.find(MyteckProduct.class, a.getId());
+        if(old!=null){
+            dal.remove(old);
+        }
+    }
+    
+    public List<MyteckProduct> findProuductsByName(String theName){
+        return dal.createQuery("Select x from Product x where x.productName = :p1")
+                .setParameter("p1", theName)
+                .getResultList();
+    }
+      public List<MyteckProduct> findProuductsByIdList(List<Integer> id){
+       ArrayList<MyteckProduct> res = new ArrayList<>() ;
+       for (Integer el: id) {
+           res.add(findProuductById(el));
+       }
+       return res ;
+    }
+      public MyteckProduct findProuductById(int id){
+
+
+        return  (MyteckProduct) dal.createQuery("Select x from Product x where x.id =  :p ")
+                           .setParameter("p", id)
+                .getSingleResult();
+    }
+      
+    
+    
+    public   ArrayList<MyteckProduct> getMyTeckProduct (String BASE_URL){
         long start = System.currentTimeMillis();
         int count2 = 0 ;
          String productName ="";

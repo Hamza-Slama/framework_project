@@ -37,8 +37,7 @@ public class NewClass {
         try {
             Analyzer analyzer = new StandardAnalyzer();
             Directory directory = new RAMDirectory();
-            IndexWriterConfig config = new
-        IndexWriterConfig(analyzer);
+            IndexWriterConfig config = new IndexWriterConfig(analyzer);
             SnapshotDeletionPolicy policy = new
         SnapshotDeletionPolicy(NoDeletionPolicy.INSTANCE);
             config.setIndexDeletionPolicy(policy);
