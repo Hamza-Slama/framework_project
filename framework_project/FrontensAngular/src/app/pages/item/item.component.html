@@ -1,0 +1,58 @@
+<div class="container" style="margin-top: 3em">
+  <br>
+  <div class="card border-0">
+    <div class="row">
+      <aside class="col-sm-12 col-md-12 col-lg-4">
+        <article class="gallery-wrap">
+          <div class="img-big-wrap">
+            <div><img  src="{{product.imgPath}}"></div>
+          </div>
+        </article>
+      </aside>
+      <aside class="col-sm-12 col-md-12 col-lg-4">
+        <article class="card-body m-0 pt-0 pl-5">
+          <h3 class="title text-uppercase">{{product.productName}}t</h3>
+          <div class="rating">
+            <div class="stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="review-no ml-2">(41 avis)</span>
+            </div>
+          </div>
+          <div class="mb-3 mt-3">
+            <span class="h7 text-success">En stock.</span>
+          </div>
+          <div class="mb-3 mt-3">
+            <span class="price-title">Prix :</span>
+            <span class="price color-price-waanbii">{{product.price}}</span>
+          </div>
+          <dl class="item-property">
+            <dt>Description</dt>
+            <dd><p [innerHTML]="product.desciption">
+            </p></dd>
+          </dl>
+        </article>
+      </aside>
+      <aside class="col-sm-12 col-md-12 col-lg-4">
+        <div class="row ">
+          <a class="btnLink" href="{{product.linkToDetails}}"> <i class="fa fa-link"></i> Go To Site</a>
+        </div>
+        <div class="row mb-4 mt-4">
+
+          <app-rating [rating]='rating' [itemId]='product.id' (ratingClick)='ratingComponentClick($event)'></app-rating>
+        </div>
+
+
+        <hr class="m-0 p-0">
+        <div class="row mb-4 mt-4">
+          Il reste 3 exemplaires du produits.
+        </div>
+      </aside>
+    </div>
+  </div>
+
+
+</div>

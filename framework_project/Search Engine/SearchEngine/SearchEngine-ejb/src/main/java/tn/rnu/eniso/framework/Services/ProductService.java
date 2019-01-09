@@ -27,7 +27,7 @@ import tn.rnu.eniso.framework.models.Product;
  * @author martin
  */
 @Stateless
-public class ProductService {
+public class ProductService  {
 
     @PersistenceContext
     EntityManager dal   ;
