@@ -6,9 +6,5 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>scrapperexp</name>
-  <modules>
-    <module>scrapperexp-ear</module>
-    <module>scrapperexp-web</module>
-    <module>scrapperexp-ejb</module>
-  </modules>
+  <modules></modules>
 </project>
